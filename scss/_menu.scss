@@ -1,0 +1,113 @@
+@mixin a ($color,$size){
+	color:$color;
+	font-size:$size;
+    text-decoration: none;
+    font-family: $font-family;
+}
+
+.navbar{
+    justify-content: space-between;
+}
+header{
+    justify-content: space-between;
+    @media only screen and ( min-width:600px){
+        position: sticky;
+        top:0px;
+  }
+}
+
+.nav-color{
+    @include a($gris-oscuro, 19px);
+    margin-left: 170px;
+    @media only screen and ( min-width:600px){
+        transition: transform .2s; 
+            &:hover{
+                transform: scale(1.7); 
+                color:$celeste-oscuro;
+                font-weight: 600;
+            
+        }
+    }
+}
+
+
+.nav-color1{
+    @include a($gris-oscuro, 40px);
+    margin-left: 30px;
+    @media only screen and ( min-width:600px){
+        transition: transform .2s; 
+            &:hover{
+                transform: scale(1.6); 
+                color: $celeste-oscuro;
+        }
+    }
+}
+
+
+.nav-color-2{
+    @include a($negro, 19px);
+    margin-left: 170px;
+    @media only screen and ( min-width:600px){
+        transition: transform .2s; 
+            &:hover{
+                transform: scale(1.7); 
+                color:$negro;
+                font-weight: 600;
+            }
+    }
+}
+
+
+.nav-color-3{
+    @include a($negro, 40px);
+    margin-left: 30px;
+    @media only screen and ( min-width:600px){
+        transition: transform .2s; 
+            &:hover{
+                transform: scale(1.6); 
+                color: $negro;
+            }
+       }
+}
+
+footer{
+    height: 100%;
+    background-color:transparent;
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type:none;
+        justify-content: space-around;
+        align-items: center;
+    }
+    a{
+        @include a($gris-oscuro,800);
+       
+     }
+   }
+    
+.footer_contacto{
+    height: 100%;
+    background-color:transparent;
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type:none;
+        justify-content: space-around;
+        align-items: center;
+    }
+    a{
+        @include a($negro,800);
+       
+     }
+   }  
+
+   .footer_propuesta{
+    @extend .footer_contacto;
+   }
+
+
+
+
+
+

@@ -1,0 +1,462 @@
+@mixin main_texto($width,$heigth){			
+    width: $width;
+    height: $heigth;			
+    display: flex;	
+}		
+@mixin main_texto_align($align){			
+    text-justify: center;			
+    align-items: $align;			
+    justify-content:center;
+}			
+    
+.main_titulo{
+    @include main_texto(100%,100%);
+    color:$gris;
+    @include main_texto_align(flex-end);
+    flex-wrap: wrap;
+    @media only screen and ( max-width:600px){
+        text-align:center;
+        }
+}
+ 
+@mixin main_titulo_p($justify, $direction){
+    justify-content:$justify;
+    flex-direction:$direction;
+    text-align: center;
+    }  
+
+.main_titulo_p{
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(end, column);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, column);
+        }
+     }  
+
+.main_titulo_h2{
+    @include main_texto(100%, 100%);
+    @include main_texto_align(center);
+    }  
+ 
+    
+@mixin main_img($ancho, $alto){
+    width:$ancho;
+    height:$alto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}    
+
+
+.main_img{
+    @include main_img(11rem, 11rem);
+    width: 110px;
+    height: 110px;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    position: fixed;
+    bottom: 490px;
+    right: 0;
+    filter: grayscale(100%);
+    @media only screen and ( min-width:600px){  
+        bottom: 450px;
+        width: 170px;
+        height: 170px;
+        transition: transform .2s; 
+            &:hover{
+                transform: scale(1.7);
+            }
+        }
+}
+
+.img1{   
+    @media only screen and ( max-width:600px){
+        width: 400px;
+        height: 200px;
+        }
+    @media only screen and ( min-width:600px){    
+        width: 300px;
+        height: 300px;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+        position: fixed;
+        left: 180px;   
+        bottom: 30px;    
+        }
+    }
+    
+.carousel{
+    display: flex;
+    justify-content:right;
+    align-content:center;
+    width: 90%;
+    height: 90%;
+    @media only screen and ( min-width:600px){  
+        filter: grayscale(100%);
+        &:hover{
+            filter: grayscale(0%);
+    }
+  }
+}
+.texto-rigth{
+    display: flex;
+    justify-content:right;
+    margin-left: 100px;
+    top: 130px;
+}
+
+.main_titulo_p_contacto{
+    @media only screen and ( max-width:600px){
+        @include main_texto(100%, 100%);
+        @include main_titulo_p(end, column);
+        
+        }
+    @media only screen and ( min-width:600px){
+        @include main_texto(100%, 100%);
+        @include main_titulo_p(center, column);
+        }
+     }  
+
+         
+@mixin img2($width, $height){
+    display: flex;
+    width: $width;
+    height: $height;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    align-self:center;
+    justify-self: center;
+}    
+.img2{
+    @media only screen and ( max-width:600px){
+        @include img2(200px, 200px);
+        
+        }
+    @media only screen and ( min-width:600px){
+        @include img2(200px, 200px);
+        transition: transform .9s; 
+            &:hover{
+                transform: translate(0px, 200px);
+        }
+    }
+}
+
+.form_contacto{
+    @media only screen and ( max-width:600px){
+        display: flex;
+        width: 80%;
+        align-self:flex-end;
+        justify-self: center; 
+    }
+}
+.main_titulo_p_ubicacion{
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(end, column);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, column);
+        }
+     }  
+
+
+@mixin mapa($width, $height){     
+    display: flex;
+    width: $width;
+    height: $height;
+    background-size: 100% auto;
+   
+    }
+
+
+.main_mapa_ubicacion{
+    @media only screen and ( max-width:600px){
+        @include mapa(400px, 300px);
+        margin-top: 35rem;
+        align-self:center;
+        justify-self: center;
+            }
+    @media only screen and ( min-width:600px){
+        @include mapa(600px, 500px);
+        align-self:center;
+        justify-self: center;
+        }
+     }
+
+.main_titulo_historia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    flex-direction: column;
+    color: $gris-oscuro;
+    animation: intro1 10s linear infinite; 
+    @media only screen and ( max-width:600px){
+       margin-top: 8rem;
+        }
+}
+
+.main_texto_historia_h2 {
+    @media only screen and ( max-width:600px){
+        font-size: 80px;
+        text-align:center;
+        margin: 0 0 60px 0;
+        color: $blanco;
+       }
+    @media only screen and ( min-width:600px){
+        font-size: 120px;
+        text-align:center;
+        margin: 0 0 60px 0;
+        color: $blanco;
+       }     
+    }
+.main_texto_historia_p {
+    @media only screen and ( max-width:600px){
+        color: $blanco;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: 15px;
+       }
+    @media only screen and ( min-width:600px){
+        color: $blanco;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 20px;
+       }     
+    }
+       
+        
+.main_texto_historia{
+    @media only screen and ( max-width:600px){
+        text-align:justify;
+        padding: 0px 200px 0px 0px;
+        margin: 0 auto;
+        letter-spacing: 1.5px;
+        max-width: 1080px;
+        height: 800px;
+        transform: perspective(500px) rotateX(14deg);
+        animation: intro 25s linear infinite;
+        }
+    @media only screen and ( min-width:600px){
+        text-align:justify;
+        padding: 0px 0px 0px 270px;
+        margin: 0 auto;
+        letter-spacing: 1.5px;
+        max-width: 1080px;
+        height: 800px;
+        transform: perspective(500px) rotateX(14deg);
+        animation: intro 25s linear infinite;
+        }
+     }
+          
+ 
+@keyframes intro {
+    0% {
+        transform: perspective(500px) rotateX(14deg) translateY(400px);
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.7;
+            }
+    100% {
+        transform: perspective(500px) rotateX(20deg) translateY(-1800px);
+        opacity: 0.25;
+        }
+    }
+    
+ 
+@keyframes intro1 {
+    0% {
+        opacity: 0.7;
+    }
+    60% {
+        opacity: 0.2;
+        }
+    100% {
+       opacity: 0.7;
+            }
+        }
+
+       
+.main_texto_historia_1_p {
+    color: $blanco;
+    font-size: 20px;
+    font-family: $font-family;
+    font-style: italic;
+          }       
+     
+               
+                
+.main_texto_historia_1{
+    display: flex;
+    flex: wrap;
+    align-self:center;
+    justify-self:self-start;
+    flex-direction: column;
+    text-align:center;
+    padding-left: 130px;
+    }
+                  
+.main_img_historia_img{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    align-self:flex-end;
+    justify-self: center;
+  
+        }
+
+.main_titulo_propuesta_t{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    color: $celeste-oscuro;
+   
+    
+}
+
+
+@mixin titulo_propuesta ($justify){
+    display: flex;
+    align-items: center;
+    justify-content:$justify;
+    text-align:right;
+    color: $gris;
+    }
+
+.main_titulo_propuesta_n{
+    @include titulo_propuesta(right);
+    }
+
+.main_texto_propuesta_n_1{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align:left;
+    flex-direction: column;
+}
+.main_texto_propuesta_n_p{
+    @media only screen and ( max-width:600px){
+        color: $blanco;
+        font-size: 15px;
+        font-family: $font-family;
+        }
+    @media only screen and ( min-width:600px){
+        color: $blanco;
+        font-size: 40px;
+        font-family: $font-family;
+        font-style: italic;
+     }
+    }
+
+.main_img_propuesta_n_1{
+    display:flex;
+    height: 90%;
+    @media only screen and ( max-width:600px){
+        margin: 20px 80px 20px 80px;
+        align-self:center;
+        justify-self: center;
+        width: 80%;
+    }
+    @media only screen and ( min-width:600px){
+        margin: 10px 10px 10px 10px;
+        align-items:center;
+        justify-content: center;
+        filter: grayscale(100%);
+        &:hover{
+            filter: grayscale(0%);
+     }
+    }
+}
+.main_img_propuesta_n_2{
+    @extend .main_img_propuesta_n_1;
+        }    
+.main_img_propuesta_n_3{
+    @extend .main_img_propuesta_n_1;
+        }
+.main_img_propuesta_n_4{
+    @extend .main_img_propuesta_n_1;
+        }
+      
+.main_titulo_propuesta_c{
+    @include titulo_propuesta(left);
+     }
+        
+.main_texto_propuesta_c_1{
+    @extend .main_texto_propuesta_n_1;
+    text-align:center;
+    }
+.main_texto_propuesta_c_p{
+    @extend .main_texto_propuesta_n_p;
+    
+    }
+.main_img_propuesta_c_1{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_img_propuesta_c_2{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_img_propuesta_c_3{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_img_propuesta_c_4{
+    @extend .main_img_propuesta_n_1;
+    }
+      
+.main_titulo_propuesta_d{
+    @include titulo_propuesta(right);
+    }
+
+.main_img_propuesta_d_1{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_img_propuesta_d_2{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_img_propuesta_d_3{
+    @extend .main_img_propuesta_n_1;
+    }
+      
+.main_titulo_propuesta_co{
+    @include titulo_propuesta(left);
+    }
+.main_texto_propuesta_co_1{
+    @extend .main_img_propuesta_n_1;
+    }
+.main_texto_propuesta_co_1_p{
+    @extend .main_texto_propuesta_n_p;
+    }
+
+.main_img_propuesta_co_1{
+    @extend .main_img_propuesta_n_1;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    align-self:flex-end;
+    justify-self: center;
+    @media only screen and ( max-width:600px){
+        width: 200px;
+        height: 200px;
+    }
+    @media only screen and ( min-width:600px){
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.main_img_propuesta_co_2{
+    @extend .main_img_propuesta_co_1;
+  
+    }        
+    
+    
+    

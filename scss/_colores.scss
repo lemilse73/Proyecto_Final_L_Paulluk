@@ -1,0 +1,129 @@
+$verde-claro:  rgb(202, 232, 191);
+$azul-oscuro: rgb(79, 51, 161);
+$verde-oscuro: rgb(5, 86, 81);
+$azul-claro: rgb(149, 214, 247);
+$celeste-oscuro: rgb(74, 183, 237);
+$celeste-militar: rgb(17, 78, 109);
+$verde: rgba(28, 244, 179, 0.719);
+$azul: rgb(64, 51, 139);
+$violeta:rgb(244, 184, 232);
+$rosa:rgb(234, 149, 218);
+$rojo:rgb(238, 171, 171);
+$naranja:rgba(245, 96, 62, 0.719);
+$negro: black;
+$blanco: rgb(244, 243, 243);
+$gris: rgb(184, 182, 182);
+$gris-oscuro: rgb(102, 100, 100);
+$azul-oscuro1: rgb(2, 2, 46);
+$azul-oscuro2:rgb(3, 3, 88);
+$gris-oscuro1:rgb(53, 52, 52);
+
+
+body{
+    @media only screen and ( max-width:600px){
+        background-color: $negro;
+    }
+
+    @media only screen and ( min-width:600px){
+        background-color: $negro;
+        }
+}
+
+.body_contacto{
+    background-image: linear-gradient($blanco,$gris);
+    }  
+
+
+.body_ubicacion{
+    background-image:linear-gradient($gris-oscuro, $blanco);
+     
+}
+
+
+.color_tarjeta{
+    background-image:linear-gradient($negro, $celeste-militar);
+    @media only screen and ( min-width:600px){
+        &:hover{
+             background-image:linear-gradient($celeste-militar, $gris);
+    }
+  }  
+}
+
+.color_tarjeta1{
+    background-image:linear-gradient($negro, $celeste-oscuro);
+    @media only screen and ( min-width:600px){
+        &:hover{
+            background-image:linear-gradient($celeste-oscuro, $gris-oscuro);
+    }
+  }  
+}
+.body_propuesta{
+    background-image:linear-gradient($negro, $gris-oscuro);
+    }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tarjeta_color{
+    background-color: $verde-claro;
+        &:hover{
+            background-color: $azul-oscuro;
+            color: $azul-claro;
+    }  
+}
+
+.tarjeta_color1{
+    background-color: $verde-claro;
+        &:hover{
+            background-color:$verde-oscuro;
+            color: $azul-claro;
+    } 
+} 
+
+.body_imagenes{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $azul);
+    } 
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$celeste-militar);
+    }
+}
+
+
+.body_tipos{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $rojo);
+    }
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$naranja);
+    }  
+}
+
+

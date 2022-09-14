@@ -1,0 +1,71 @@
+
+.tarjeta{
+    width: 80%;
+    box-shadow: rgba(97, 96, 96, 0) 0px 3px 6px, rgb(225, 209, 209) 0px 3px 6px;
+    display: flex;
+    flex-direction:column;
+    justify-self: center;
+    @media only screen and ( max-width:600px){
+        height: 90%;
+        }
+    @media only screen and ( min-width:600px){
+        height: 70%;
+        }  
+    &__h3{
+        display: flex;
+        text-justify: center; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        color: $blanco;
+        @media only screen and ( max-width:600px){
+           font-size:16px;
+            }
+        @media only screen and ( min-width:600px){
+            font-size:40px;
+            }
+        }   
+    &__p{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $gris;
+        @media only screen and ( max-width:600px){
+            font-size:12px;
+            }
+        @media only screen and ( min-width:600px){
+            font-size:20px;
+            }
+        }       
+    }
+
+
+.main_tarjeta_propuesta_d_1{
+    @extend .tarjeta;
+        @media only screen and ( max-width:600px){
+            align-self:flex-end;
+        }   
+        @media only screen and ( min-width:600px){
+            align-self: center;
+        }   
+ }
+        
+.main_tarjeta_propuesta_d_2{
+    @extend .tarjeta;
+    @media only screen and ( max-width:600px){
+        align-self:flex-end;
+        }   
+    @media only screen and ( min-width:600px){
+        align-self: center;
+    }   
+}
+
+.main_tarjeta_propuesta_d_3{
+    @extend .tarjeta;
+    @media only screen and ( max-width:600px){
+        align-self:flex-end;
+     }   
+    @media only screen and ( min-width:600px){
+        align-self: center;
+    }   
+}
